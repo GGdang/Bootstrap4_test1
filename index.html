@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bootstrap-demo</title>
+    <!--bootstrao的CSS掛載-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!--css reset-->
+    <link rel="stylesheet" href="reset.css">
+    <!--自己的CSS掛載-->
+    <link rel="stylesheet" href="index.css">
+    <!--外掛的動畫-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+    <div class="Bikin-Demo">
+        <!-- window height
+        <div class="window-size">
+            scrollTop:{{window.scrollTop}}
+            <br>
+            introduceY:{{window.introduceY}}
+            <br>
+            contentY:{{window.contentY}}
+            <br>
+            expenseY:{{window.expenseY}}
+            <br>
+            ourteamY:{{window.ourteamY}}
+            <br>
+            contactY:{{window.contactY}}
+        </div>
+        -->
+        <!--topbtn-->
+        <div class="topbtn" @click="animateTop" :class="topbtn">
+            <img src="images/icon/rocket_up.png" width="70px" alt="topbtn" srcset="">
+        </div>
+        <!--navbar-->
+        <div class="demo-nav navbar navbar-expand-lg fixed-top navbar-dark bg-primary p-3">
+            <a href="#" class="navbar-brand pl-3 logo text-dark" @click="animateTop">Bikin</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#bikin-navbar" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end mr-5" id="bikin-navbar">
+                <ul class="navbar-nav menu-link" id="menu-link">
+                    <li class="nav-item"  @click="animate">
+                        <a href="#" class="nav-link mr-2 " >Feature</a>
+                    </li>
+                    <li class="nav-item"  @click="animate">
+                        <a href="#" class="nav-link mr-2 " >Gallery</a>
+                    </li>
+                    <li class="nav-item"  @click="animate">
+                        <a href="#" class="nav-link mr-2 " >Price & Plan</a>
+                    </li>
+                    <li class="nav-item"  @click="animate">
+                        <a href="#" class="nav-link mr-2 " >Our Team</a>
+                    </li>
+                    <li class="nav-item"  @click="animate">
+                        <a href="#" class="nav-link mr-2 ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--carousel-->
+        <div id="carousel-control" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/carousel_001.jpg" alt="First slide" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carousel_002.jpg" alt="Second slide" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carousel_003.jpg" alt="Third slide" class="d-block w-100">
+                </div>
+            </div>
+            <a href="#carousel-control" data-slide="prev" class="carousel-control-btn-pre">
+                <span class="carousel-control-btn">
+                    <</span>
+            </a>
+            <a href="#carousel-control" data-slide="next" class="carousel-control-btn-next">
+                <span class="carousel-control-btn">></span>
+            </a>
+        </div>
+        <!--introduce-->
+        <div class="container introduce" id="introduce">
+            <div class="row pt-5">
+                <div class="col-12 text-center mb-5">
+                    <h2>Features</h2>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit
+                    </p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-center context-item">
+                        <img src="images/icon/rack-server-magnifier.png" alt="" width="210px" class="img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Fully Responsive</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-center context-item">
+                        <img src="images/icon/rack-server-plus.png" alt="" width="210px" class="img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Fully Responsive</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-center context-item">
+                        <img src="images/icon/shared-hosting.png" alt="" width="210px" class="img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Fully Responsive</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card text-center context-item">
+                        <img src="images/icon/ssl-certificated.png" alt="" width="210px" class="img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Fully Responsive</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--content-->
+        <div class="container-fluid content" id="content">
+            <div class="content-text text-center">
+                <h2>Gallery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit
+                </p>
+            </div>
+            <div class="container-fluid">
+                <div class="content-img row align-items-center content-one animated ">
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/1.jpg" alt="" srcset="">
+                    </div>
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/2.jpg" alt="" srcset="">
+                    </div>
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/3.jpg" alt="" srcset="">
+                    </div>
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/4.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="content-img row align-items-center content-two animated">
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/5.jpg" alt="" srcset="">
+                    </div>
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/6.jpg" alt="" srcset="">
+                    </div>
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/7.jpg" alt="" srcset="">
+                    </div>
+                    <div class="img-item mb-3 col-12 col-md-6 col-lg-3">
+                        <img src="images/work/8.jpg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--expense-->
+        <div class="container-fluid expense " id="expense">
+            <div class="expense-title text-center">
+                <h2>Pricing Table</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna
+                    aliqua. Ut enim ad minim veniam</p>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4 expense-item text-center ">
+                        <ul class="expense-item-body">
+                            <li class="expense-item-header bg-danger text-light animated">
+                                <h2>Start Up</h2>
+                                <span>$6/Month</span>
+                            </li>
+                            <li>5Gb Disk Space</li>
+                            <li>1Gb Dadicated Ram</li>
+                            <li>10 Addon Domain</li>
+                            <li>10 Email Account</li>
+                            <li>24/7 Support</li>
+                            <li>
+                                <button class="btn btn-danger btn-lg">Sign up</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 expense-item text-center animated">
+                        <ul class="expense-item-body">
+                            <li class="expense-item-header bg-success text-light">
+                                <h2>Standard</h2>
+                                <span>$12/Month</span>
+                            </li>
+                            <li>10Gb Disk Space</li>
+                            <li>2Gb Dadicated Ram</li>
+                            <li>20 Addon Domain</li>
+                            <li>20 Email Account</li>
+                            <li>24/7 Support</li>
+                            <li>
+                                <button class="btn btn-success btn-lg">Sign up</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 expense-item text-center animated">
+                        <ul class="expense-item-body">
+                            <li class="expense-item-header bg-warning text-light">
+                                <h2>Premium</h2>
+                                <span>$24/Month</span>
+                                <img src="images/rib.png" alt="">
+                            </li>
+                            <li>50Gb Disk Space</li>
+                            <li>8Gb Dadicated Ram</li>
+                            <li>Unlimited Addon Domain</li>
+                            <li>Unlimited Email Account</li>
+                            <li>24/7 Support</li>
+                            <li>
+                                <button class="btn btn-warning btn-lg">Sign up</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 expense-item text-center animated">
+                        <ul class="expense-item-body">
+                            <li class="expense-item-header bg-primary text-light">
+                                <h2>Basic</h2>
+                                <span>$3/Month</span>
+                            </li>
+                            <li>5Gb Disk Space</li>
+                            <li>1Gb Dadicated Ram</li>
+                            <li>10 Addon Domain</li>
+                            <li>10 Email Account</li>
+                            <li>24/7 Support</li>
+                            <li>
+                                <button class="btn btn-primary btn-lg">Sign up</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 expense-item text-center animated">
+                        <ul class="expense-item-body">
+                            <li class="expense-item-header bg-primary text-light">
+                                <h2>Standard</h2>
+                                <span>$6/Month</span>
+                            </li>
+                            <li>5Gb Disk Space</li>
+                            <li>1Gb Dadicated Ram</li>
+                            <li>10 Addon Domain</li>
+                            <li>10 Email Account</li>
+                            <li>24/7 Support</li>
+                            <li>
+                                <button class="btn btn-primary btn-lg">Sign up</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 expense-item text-center animated">
+                        <ul class="expense-item-body">
+                            <li class="expense-item-header bg-danger text-light">
+                                <h2>Premium</h2>
+                                <span>$12/Month</span>
+                            </li>
+                            <li>5Gb Disk Space</li>
+                            <li>1Gb Dadicated Ram</li>
+                            <li>10 Addon Domain</li>
+                            <li>10 Email Account</li>
+                            <li>24/7 Support</li>
+                            <li>
+                                <button class="btn btn-danger btn-lg">Sign up</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 expense-item text-center animated">
+                        <ul class="expense-item-body">
+                            <li class="expense-item-header bg-primary text-light">
+                                <h2>Developer</h2>
+                                <span>$19/Month</span>
+                            </li>
+                            <li>5Gb Disk Space</li>
+                            <li>1Gb Dadicated Ram</li>
+                            <li>10 Addon Domain</li>
+                            <li>10 Email Account</li>
+                            <li>24/7 Support</li>
+                            <li>
+                                <button class="btn btn-primary btn-lg">Sign up</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ourteam-->
+        <div class="container-fulid ourTeam text-center " id="ourteam">
+            <div class="ourTeam-head pt-5 pb-5">
+                <h2>Our Team</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit
+                </p>
+            </div>
+            <div class="ourTeam-body">
+                <ul class="row m-0">
+                    <li class="col-12 col-md-4">
+                        <img src="images/team/1.png" alt="">
+                        <strong>John Doe</strong>
+                        <p>Founder & CEO</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
+                    </li>
+                    <li class="col-12 col-md-4">
+                        <img src="images/team/2.png" alt="">
+                        <strong>John Doe</strong>
+                        <p>Creative Director</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
+                    </li>
+                    <li class="col-12 col-md-4">
+                        <img src="images/team/3.png" alt="">
+                        <strong>John Smith</strong>
+                        <p>Creative Director</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="ourTeam-footer">
+                <ul class="row m-0">
+                    <li class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <img src="images/team/team1.jpg" alt="">
+                        <p>
+                            <strong>John Doe</strong>
+                        </p>
+                        <p>Founder & CEO</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
+                    </li>
+                    <li class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <img src="images/team/team2.jpg" alt="">
+                        <strong>John Doe</strong>
+                        <p>Creative Director</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
+                    </li>
+                    <li class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <img src="images/team/team3.jpg" alt="">
+                        <strong>John Doe</strong>
+                        <p>Creative Director</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
+                    </li>
+                    <li class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <img src="images/team/team4.jpg" alt="">
+                        <strong>John Doe</strong>
+                        <p>Creative Director</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--contact-->
+        <div class="container-fulid contactUs" id="contact">
+            <div class="contactUs-header">
+                <h1>Contact Us</h1>
+                <p>Fusce fermen tum neque a rutrum varius odio pede</p>
+            </div>
+            <div class="row m-0">
+                <div class="col-md-12 col-lg-4 contactUs-time">
+                    <h2>Contact us any time</h2>
+                    <p>In a elit in lorem congue varius. Sed nec arcu. Etiam sit amet augue. Fusce fermen tum neque a rutrum
+                        varius odio pede ullamcorp-er tellus ut dignissim nisi risus non tortor. Aliquam mollis neque.</p>
+                </div>
+                <div class="col-md-12 col-lg-4 contactUs-info">
+                    <h2>Contact Info</h2>
+                    <ul>
+                        <li>Office # 38, Suite 54 Elizebth Street, Victoria State Newyork, USA 33026</li>
+                        <hr>
+                        <li>+38 000 129900</li>
+                        <hr>
+                        <li>info@domain.net</li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 form-row contactUs-form">
+                    <div class="col-8 mb-3">
+                        <input class="form-control" type="text" placeholder="Name">
+                    </div>
+                    <div class="col-10 mb-3">
+                        <input class="form-control" type="text" placeholder="E-Mail">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <input class="form-control" type="text" placeholder="Subject">
+                    </div>
+                    <div class="col-10 mb-3">
+                        <textarea class="form-control" name="" id="" rows="10"></textarea>
+                    </div>
+                    <button class="btn btn-primary btn-lg">
+                        Submit Message
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer navbar bg-dark text-white justify-content-center">
+            <span>© 2015 <a href="http://bootstrap.hexschool.com/">bootstraptaste.</a> All Rights Reserved.</span>
+        </div>
+    </div>
+    <!--jq掛載-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--bootstrao掛載-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--vue掛載-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!--自己的JS掛載-->
+    <script src="index.js"></script>
+</body>
+
+</html>

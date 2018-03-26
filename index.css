@@ -1,0 +1,239 @@
+*{
+    padding:0;
+    margin:0;
+}
+p{
+    font-size: 18px;
+    line-height: 1.2;
+}
+.topbtn{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.404);
+    border:1px rgb(114, 114, 114) solid;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 50px;
+    right: -100px;
+    z-index: 20;
+    cursor: pointer;
+}
+.window-size{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.466);
+    color: white;
+    position: fixed;
+    top:100px;
+    left: 0;
+    z-index: 15;
+}
+.nav-link.active{
+    background-color: black;
+    border-radius: 5px;
+}
+.demo-nav{
+    box-shadow: black 2px 2px 2px;
+}
+.menu-link li a:hover{
+   color:rgb(255, 0, 0);
+}
+.logo{
+    font-size: 40px;
+    margin-left: 30px;
+}
+.logo:hover{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+.carousel-control-btn-pre{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(51, 49, 206);
+    cursor: auto;
+    text-decoration: none;
+}
+.carousel-control-btn-next{
+    right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(51, 49, 206);
+    cursor: auto;
+    text-decoration: none;
+}
+.carousel-control-btn{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border: 2px rgb(79, 79, 117) solid;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.carousel-control-btn:hover{
+    background-color: rgb(79, 79, 117);
+    color: bisque;
+}
+#carousel-control{
+    margin-top: 66px;
+}
+.img-top{
+    margin:0 auto;
+    padding-top:30px;
+    padding-bottom: 30px; 
+    
+}
+.context-item{
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 1s;
+    
+}
+.context-item:hover{
+    background-color: rgba(0, 0, 0, 0.137);
+    
+}
+.content{
+    background-color: rgb(241, 240, 232);
+    margin-top:100px;
+    padding-bottom: 80px;
+}
+.content>div:first-of-type{
+    padding-top:100px;
+    padding-bottom: 80px;
+}
+.content-img{
+    display: flex;
+}
+.img-item{
+    width: 25%;
+    text-align: center;
+}
+.img-item img{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    transition: width 1s,opacity 1s;
+    opacity: 1;
+}
+.img-item img:hover{
+    opacity: 0.6;
+    width: 75%;
+}
+.expense-title{
+    padding-top: 100px;
+    padding-bottom:50px;
+}
+.expense{
+
+}
+.expense-item{
+    margin-bottom: 20px;
+}
+.expense-item-header{
+    border-radius: 10px;
+}
+.expense-item-header img{
+    position: absolute;
+    top:0;
+    right: 15px;
+}
+.expense-item-body{
+    list-style: none;
+}
+.expense-item-body li{
+    padding: 20px;
+    font-size: 20px;
+}
+.expense-item-body li:nth-of-type(even){
+    background-color: rgb(231, 231, 231);
+    
+}
+.expense-item-body li:nth-of-type(odd){
+    background-color: rgb(204, 204, 204);
+}
+.ourTeam{
+
+}
+.ourTeam-body ul{
+    list-style: none;
+}
+.ourTeam-body li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ourTeam-body ul li img{
+    margin: 0 auto;
+    display: block;
+    width: 75%;
+    height: auto;
+}
+.ourTeam-footer ul{
+    list-style: none;
+}
+.ourTeam-footer li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ourTeam-footer ul li img{
+    border-radius: 15px;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+.contactUs{
+    background-image: url("images/contactbg.png");
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+}
+.contactUs-header{
+    text-align: center;
+    padding-top:50px;
+    margin-bottom: 80px;
+}
+.contactUs-header p{
+    font-size: 25px;
+}
+.contactUs-time,.contactUs-info{
+    color: rgb(187, 206, 123);
+    padding:30px;
+}
+.contactUs-time h2,.contactUs-info h2{
+    padding-bottom: 30px;
+    font-weight: bolder;
+    font-size: 38px;
+}
+.contactUs-time p,.contactUs-info li{
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.contactUs-info li{
+    padding-bottom: 30px;
+}
+.contactUs-info hr{
+    background-color:rgb(211, 231, 143);
+    height: 1px;
+}
+.contactUs-form{
+    
+    padding: 20px;
+}
+
